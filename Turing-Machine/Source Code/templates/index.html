@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Turing Machine Simulator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container m-auto">
+        <h1 class="text-center mb-4">Turing Machine Simulator</h1>
+            <!-- <div id="case2">
+                <img src="{{ url_for('static', filename='case2.png') }}" alt="Hasil Diagram" class="img-fluid">
+            </div> -->
+            <div>
+                <img src="../static/case2.png" alt="case2" class="img-fluid" style="display:block; margin:auto;">
+            </div>
+        <form method="post">
+            <div class="form-group">
+                <label for="input_string"><strong>Input String:</strong></label>
+                <input type="text" class="form-control" id="input_string" name="input_string" placeholder="Masukkan string yang ingin di execute" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <div class="mt-4">
+            <h2 class="text-center">Result</h2>
+            <p class="text-center text-danger"><strong>{{'TIDAK ADA TRANSISI YANG VALID' if isErrors }}</strong></p>
+            <p class="text-center"><strong>Final Tape:</strong> {{ result }}</p>
+            <p class="text-center"><strong>Count of '0':</strong> {{ result_count }}</p>
+        </div>
+
+        <!-- bagian foto -->
+        <!-- <div class="text-center mt-4">
+            <label><strong>Hasil Diagram:</strong></label>
+            <div id="diagram_result">
+                <img src="../static/diagram.jpg" alt="Hasil Diagram" class="img-fluid">
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>
